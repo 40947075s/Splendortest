@@ -11,6 +11,12 @@ public class BuildroomSceneManager : MonoBehaviourPunCallbacks
     [SerializeField]
     InputField inputRoomName;
 
+    void Start(){
+        if(PhotonNetwork.IsConnected == false){
+            SceneManager.LoadScene("scene_start");
+        }
+    }
+
     public string GetRoomName(){
         string roomName = inputRoomName.text;
         return roomName.Trim();
@@ -26,7 +32,7 @@ public class BuildroomSceneManager : MonoBehaviourPunCallbacks
     }
     
      public void OnClickLeaveScene(){
-        SceneManager.LoadScene("scene_loby");
+        SceneManager.LoadScene("scene_lobby");
     }
 
     public override void OnJoinedRoom()
@@ -35,4 +41,11 @@ public class BuildroomSceneManager : MonoBehaviourPunCallbacks
         SceneManager.LoadScene("scene_room");
     }
 
+    public override void OnCreateRoomFailed(short returnCode, string message)
+    {
+        print("build faild");
+        inputRoomName.text = "";
+        inputRoomName.placeholder.GetComponent<Text>().text = "無法建立房間，請重新輸入";
+    }
+ 
 }

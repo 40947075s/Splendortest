@@ -373,7 +373,7 @@
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
 "Assets/Scripts/BuildroomSceneManager.cs"
 "Assets/Scripts/Enterroom_sceneManager.cs"
-"Assets/Scripts/LobySceneManager.cs"
+"Assets/Scripts/LobbySceneManager.cs"
 "Assets/Scripts/RoomSceneManager.cs"
 "Assets/Scripts/StartSceneManager.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"

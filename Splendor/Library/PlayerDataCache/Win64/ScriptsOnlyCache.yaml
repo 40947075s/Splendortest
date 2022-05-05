@@ -3,7 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BuildroomSceneManager
     - Enterroom_sceneManager
-    - LobySceneManager
+    - LobbySceneManager
     - RoomSceneManager
     - StartSceneManager
     PhotonUnityNetworking.Demos.dll:
@@ -60,7 +60,9 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Shadow
@@ -91,17 +93,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 3580}
+      Script: {instanceID: 3582}
     - Class: 114
-      Script: {instanceID: 6532}
+      Script: {instanceID: 6534}
     - Class: 114
-      Script: {instanceID: 7108}
+      Script: {instanceID: 7110}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -109,8 +111,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -144,17 +144,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 6532}
+      Script: {instanceID: 6534}
     - Class: 114
-      Script: {instanceID: 6810}
+      Script: {instanceID: 6812}
     - Class: 114
-      Script: {instanceID: 7108}
+      Script: {instanceID: 7110}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -193,9 +193,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 4894}
+      Script: {instanceID: 4896}
     - Class: 114
-      Script: {instanceID: 7108}
+      Script: {instanceID: 7110}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -206,7 +206,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
-    Assets/Scenes/scene_loby.unity:
+    Assets/Scenes/scene_lobby.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -226,24 +226,26 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1528}
     - Class: 114
+      Script: {instanceID: 1530}
+    - Class: 114
       Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 4058}
+      Script: {instanceID: 4060}
     - Class: 114
-      Script: {instanceID: 6532}
+      Script: {instanceID: 6534}
     - Class: 114
-      Script: {instanceID: 7108}
+      Script: {instanceID: 7110}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -277,15 +279,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 2892}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 6532}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 7108}
+      Script: {instanceID: 3588}
     - Class: 114
-      Script: {instanceID: 24636}
+      Script: {instanceID: 5752}
+    - Class: 114
+      Script: {instanceID: 6534}
+    - Class: 114
+      Script: {instanceID: 7110}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -293,8 +299,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -354,53 +358,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3278}
+      Script: {instanceID: 3280}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 4272}
+      Script: {instanceID: 4274}
     - Class: 114
-      Script: {instanceID: 4276}
+      Script: {instanceID: 4278}
     - Class: 114
-      Script: {instanceID: 4468}
+      Script: {instanceID: 4470}
     - Class: 114
-      Script: {instanceID: 4508}
+      Script: {instanceID: 4510}
     - Class: 114
-      Script: {instanceID: 4636}
+      Script: {instanceID: 4638}
     - Class: 114
-      Script: {instanceID: 4894}
+      Script: {instanceID: 4896}
     - Class: 114
-      Script: {instanceID: 4954}
+      Script: {instanceID: 4956}
     - Class: 114
-      Script: {instanceID: 5738}
+      Script: {instanceID: 5740}
     - Class: 114
-      Script: {instanceID: 5766}
+      Script: {instanceID: 5768}
     - Class: 114
-      Script: {instanceID: 5840}
+      Script: {instanceID: 5842}
     - Class: 114
-      Script: {instanceID: 6260}
+      Script: {instanceID: 6262}
     - Class: 114
-      Script: {instanceID: 6312}
+      Script: {instanceID: 6314}
     - Class: 114
-      Script: {instanceID: 6532}
+      Script: {instanceID: 6534}
     - Class: 114
-      Script: {instanceID: 7108}
+      Script: {instanceID: 7110}
     - Class: 114
-      Script: {instanceID: 7116}
+      Script: {instanceID: 7118}
     - Class: 114
-      Script: {instanceID: 7816}
+      Script: {instanceID: 7818}
     - Class: 114
-      Script: {instanceID: 8424}
+      Script: {instanceID: 8426}
     - Class: 114
-      Script: {instanceID: 8872}
+      Script: {instanceID: 8874}
     - Class: 114
-      Script: {instanceID: 9022}
+      Script: {instanceID: 9024}
     - Class: 114
-      Script: {instanceID: 9380}
+      Script: {instanceID: 9382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -420,8 +424,6 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -784,6 +786,12 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
+      Hash: e2f7f6e30dacd41b7f42192f61e46fb6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RoomSceneManager
+  - hash:
+      serializedVersion: 2
       Hash: 0927e41b46e1bd11671f9b5adda4b832
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
@@ -1087,7 +1095,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: LobySceneManager
+    className: LobbySceneManager
   - hash:
       serializedVersion: 2
       Hash: cd1c93a552a813159175d818a844dc09
@@ -2468,16 +2476,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: e2f7f6e30dacd41b7f42192f61e46fb6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RoomSceneManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/scene_start.unity
-  - Assets/Scenes/scene_loby.unity
+  - Assets/Scenes/scene_lobby.unity
   - Assets/Scenes/scene_buildroom.unity
   - Assets/Scenes/scene_enterroom.unity
   - Assets/Scenes/scene_room.unity

@@ -4,11 +4,18 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using ExitGames.Client.Photon;
 
 public class Enterroom_sceneManager : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     InputField inputRoomName;
+
+    void Start(){
+        if(PhotonNetwork.IsConnected == false){
+            SceneManager.LoadScene("scene_start");
+        }
+    }
 
     public string GetRoomName(){
         string roomName = inputRoomName.text;
@@ -25,7 +32,7 @@ public class Enterroom_sceneManager : MonoBehaviourPunCallbacks
     }
 
     public void OnClickLeaveScene(){
-        SceneManager.LoadScene("scene_loby");
+        SceneManager.LoadScene("scene_lobby");
     }
 
     public override void OnJoinedRoom()
@@ -34,6 +41,11 @@ public class Enterroom_sceneManager : MonoBehaviourPunCallbacks
         SceneManager.LoadScene("scene_room");
     }
 
-
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        print("enter faild");
+        inputRoomName.text = "";
+        inputRoomName.placeholder.GetComponent<Text>().text = "無法加入房間，請重新輸入";
+    }
 
 }

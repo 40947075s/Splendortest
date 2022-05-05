@@ -32,7 +32,7 @@ public class StartSceneManager : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
        print("connected");
-       SceneManager.LoadScene("scene_loby");
+       SceneManager.LoadScene("scene_lobby");
     }
 
 
