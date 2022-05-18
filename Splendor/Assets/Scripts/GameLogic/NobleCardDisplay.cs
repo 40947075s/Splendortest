@@ -10,9 +10,7 @@ public class NobleCardDisplay : MonoBehaviour
     public Image[] token = new Image[3];
     public Text prestige;
     
-    public NobleCard card;
-    
-    public void ShowCard(){
+    public void ShowCard(NobleCard card){
         back.sprite = Resources.Load("Card/noble", typeof(Sprite)) as Sprite;
 
         int iToken = 0;

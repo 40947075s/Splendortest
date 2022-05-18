@@ -42,35 +42,15 @@ public class GM : MonoBehaviourPunCallbacks
         Shuffle(randDev);
         Shuffle(randNoble);
     
-        BB = new Board(randDev, randNoble);
+        BB = new Board(randDev, randNoble, ref DB);
     }
 
     public void SetUpBoard(List<int> rd, List<int> rn){
-        Debug.Log("setBoard");
-
         randDev = new List<int>(rd);
         randNoble = new List<int>(rn);
 
-        foreach(var i in randNoble){
-            Debug.Log(i);
-        }
-    
-        BB = new Board(randDev, randNoble);
+        BB = new Board(randDev, randNoble, ref DB);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public void Shuffle<T>(List<T> inputList){
         for(int i = 0; i < inputList.Count - 1; ++i){

@@ -332,7 +332,7 @@
 "Assets/Scripts/GameLogic/DevCardDisplay.cs"
 "Assets/Scripts/GameLogic/GM.cs"
 "Assets/Scripts/GameLogic/NobleCardDisplay.cs"
-"Assets/Scripts/GameLogic/PlayerDisplay.cs"
+"Assets/Scripts/GameLogic/PlayerController.cs"
 "Assets/Scripts/GameLogic/Player_.cs"
 "Assets/Scripts/GameSceneManager.cs"
 "Assets/Scripts/LobbySceneManager.cs"

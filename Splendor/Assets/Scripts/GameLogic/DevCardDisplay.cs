@@ -9,8 +9,8 @@ public class DevCardDisplay : MonoBehaviour
     public Image back, reward;
     public Image[] token = new Image[4];
     public Text prestige;
+
     
-    //public DevCard card;
 
     public void ShowCard(DevCard card){
         back.sprite = Resources.Load("Card/level" + card.level.ToString(), typeof(Sprite)) as Sprite;

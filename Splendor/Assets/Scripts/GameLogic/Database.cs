@@ -45,6 +45,7 @@ public class Database
         dataRow = tokenData.text.Split('\n');
         foreach(var row in dataRow){
             string[] values = row.Split(',');
+            if(values[0] == "#") break;
             tokens.Add(values[0], int.Parse(values[1]));
         }
     }
@@ -58,6 +59,8 @@ public class Database
     }
 
     public int GetNobleNum(){ return nobleCards.Count; }
+
+    public Dictionary<string, int> GetTokens(){ return tokens; }
 
     public DevCard GetDevCard(int level, int id){
         return devCards[level-1].Find(x => x.id == id);

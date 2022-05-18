@@ -10,12 +10,21 @@ using Photon.Realtime;
 public class GameSceneManager : MonoBehaviourPunCallbacks
 {
     public GameObject panelStartMessage;
-    public GameObject prefabGM;
-    //private PlayerDisplay myPlayer;
+    
+    //public GameObject prefabGM;
+    //public GameObject prefabPlayer
+    private PhotonView pvGSM;
+    
     private GM myGM;
     private PhotonView pvGM;
 
+    private PlayerController myPlayer;
+    private PhotonView pvPlayer;
+    
     void Start(){
+        pvGSM = this.GetComponent<PhotonView>();
+
+    // photon need 
         if(PhotonNetwork.CurrentRoom == null){
             SceneManager.LoadScene("scene_lobby");
             return;
@@ -23,20 +32,25 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
         ShowStartMessage();  
 
         InitGame();
+    
+
+    /* game scene test */
+    /*
+        myGM = GameObject.Instantiate(prefabGM, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<GM>();
+        myGM.SetUpDatabase();
+        myGM.SetUpBoard();
+        myGM.DisplayBoard();
+
+        myPlayer = GameObject.Instantiate(prefabPlayer, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<PlayerController>();
+        myPlaye.player = new Player_("Bot");
+        myPlayer.ShowPlayer();
+    */
     }
     
-    void Update() {
-        myGM.DisplayBoard();    
-    }
-
     public void InitGame(){
-        //GameObject p = PhotonNetwork.Instantiate("Player", new Vector3(0, 0, 0), Quaternion.identity);
-        GameObject g = PhotonNetwork.Instantiate("GM", new Vector3(0, 0, 0), Quaternion.identity);        
+    /* Instantiate GM, set up game data and display board */
+        GameObject g = PhotonNetwork.Instantiate("GM", new Vector3(0, 0, 0), Quaternion.identity);
         
-        //p.GetComponent<PlayerDisplay>().player = new Player_();
-        //p.GetComponent<PlayerDisplay>().player.name = PhotonNetwork.LocalPlayer.NickName;
-
-        //myPlayer = p.GetComponent<PlayerDisplay>();
         myGM = g.GetComponent<GM>();
         pvGM = g.GetPhotonView();
 
@@ -51,7 +65,19 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
             table.Add("rn", ListToString(myGM.randNoble));
             PhotonNetwork.LocalPlayer.SetCustomProperties(table);
 
+            myGM.DisplayBoard();  
         }
+
+    /* Instantiate Player, set up player data and display */
+        GameObject p = PhotonNetwork.Instantiate("PlayerPrefab", new Vector3(0, 0, 0), Quaternion.identity);
+        
+        myPlayer = p.GetComponent<PlayerController>();
+        pvPlayer = p.GetPhotonView();
+
+        myPlayer.player = new Player_(PhotonNetwork.LocalPlayer.NickName);
+        myPlayer.ShowMyPlayer();
+
+        CallRpcShowOtherPlayer(myPlayer.GetDataToOther()); /////////
     }
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, HashTable changedProps)
@@ -59,9 +85,11 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
         List<int> rd = StringToList( (string)changedProps["rd"] );
         List<int> rn = StringToList( (string)changedProps["rn"] );
         myGM.SetUpBoard(rd, rn);
+
+        myGM.DisplayBoard();  
     }
 
-    public string ListToString(List<int> list){
+    private string ListToString(List<int> list){
         string s = "";
         foreach(var i in list){
             s += (i.ToString() + ' ');
@@ -70,7 +98,7 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
         return s;
     }
 
-    public List<int> StringToList(string s){
+    private List<int> StringToList(string s){
         List<int> list = new List<int>();
         string[] values = s.Split(' ');
 
@@ -81,13 +109,18 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
         return list;
     }
 
+    public void CallRpcShowOtherPlayer(string playerData){
+        pvGSM.RPC("RpcShowOtherPlayer", RpcTarget.Others, playerData);
+    }
 
-
-
-
-
-
-
+    [PunRPC]
+    void RpcShowOtherPlayer(string playerData, PhotonMessageInfo info){
+        int index = info.Sender.ActorNumber - PhotonNetwork.LocalPlayer.ActorNumber;
+        index = (index + PhotonNetwork.PlayerList.Length) % PhotonNetwork.PlayerList.Length;
+        index += 1;
+        
+        myPlayer.ShowOtherPlayer(playerData, index);
+    }
 
 
     private void ShowStartMessage(){
@@ -98,7 +131,13 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
     }
 
     private void SwitchStartMessage(){
-        panelStartMessage.GetComponentInChildren<Text>().text = "玩家順序";
+        string s = "玩家順序: ";
+
+        for(int i=0; i<PhotonNetwork.PlayerList.Length; ++i){
+            s += (i+1).ToString() + "." + PhotonNetwork.PlayerList[i].NickName + " ";
+        }
+
+        panelStartMessage.GetComponentInChildren<Text>().text = s;
     }
 
     private void HideStartMessage(){
@@ -106,3 +145,6 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
     }
 
 }
+
+
+// PhotonNetwork.PlayerListOthers

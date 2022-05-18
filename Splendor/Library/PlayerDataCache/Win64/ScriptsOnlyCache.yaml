@@ -8,7 +8,7 @@ ScriptsOnlyBuild:
     - GameSceneManager
     - LobbySceneManager
     - NobleCardDisplay
-    - PlayerDisplay
+    - PlayerController
     - RoomSceneManager
     - StartSceneManager
     PhotonUnityNetworking.Demos.dll:
@@ -21,6 +21,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -191,8 +193,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -217,8 +217,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3286}
     - Class: 114
       Script: {instanceID: 3382}
-    - Class: 114
-      Script: {instanceID: 4700}
     - Class: 114
       Script: {instanceID: 6546}
     - Class: 114
@@ -441,11 +439,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8890}
     - Class: 114
-      Script: {instanceID: 9028}
-    - Class: 114
       Script: {instanceID: 9042}
     - Class: 114
       Script: {instanceID: 9400}
+    - Class: 114
+      Script: {instanceID: 57400}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -929,7 +927,7 @@ ScriptsOnlyBuild:
     className: OfflineModeProperty
   - hash:
       serializedVersion: 2
-      Hash: 0af7e19a3a7f084f8807dc46007f8dbf
+      Hash: ec2181992465d0cb6f50512e863ef436
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameSceneManager
@@ -2429,12 +2427,6 @@ ScriptsOnlyBuild:
     className: Block
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerDisplay
-  - hash:
-      serializedVersion: 2
       Hash: c87a2744a4fec8052f557862b102c4e4
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -2547,6 +2539,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71176f4a927d5b2491ff6703c2ecabed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerController
   platform: 19
   scenePathNames:
   - Assets/Scenes/scene_start.unity

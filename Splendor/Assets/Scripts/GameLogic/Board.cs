@@ -1,42 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Board
 {
     private GameObject prefabDev, prefabNoble;
-    private GameObject tableDev, tableNoble;
+    private GameObject tableDev, tableNoble, tableToken;
     private List<GameObject> showCards;
 
     private int[,] devPlace;
     private int[] noblePlace;
-    private int[] tokenPlace;
+    private Dictionary<string, int> tokenPlace;
     private List<int> randDev, randNoble;
 
 
-    public Board(List<int> rd, List<int> rn){
+    public Board(List<int> rd, List<int> rn, ref Database DB){
         prefabDev = (GameObject)Resources.Load("DevPrefab");
         prefabNoble = (GameObject)Resources.Load("NoblePrefab");
         tableDev = GameObject.Find("TableDevCard");
         tableNoble = GameObject.Find("TableNoble");
-
+        tableToken = GameObject.Find("TableToken");
+        
         showCards = new List<GameObject>();
 
         devPlace = new int[3,4];
         noblePlace = new int[5];
-        tokenPlace = new int[6];
+        tokenPlace = new Dictionary<string, int>();
 
         randDev = new List<int>(rd);
         randNoble = new List<int>(rn);
 
+        // dev
         for(int i=1; i<=3; ++i){
             for(int j=1; j<=4; ++j){
                 this.Replenish(i, j);
             }
         }
+        //noble
         for(int i=1; i<=5; ++i){
             this.Replenish(0, i);
         }
+
+        //token
+        tokenPlace = DB.GetTokens();
+
     }
 
     public void DisplayBoard(ref Database DB){
@@ -60,10 +68,16 @@ public class Board
             GameObject pos = GameObject.Find("Place_" + i.ToString()) as GameObject;
             GameObject newCard = GameObject.Instantiate(prefabNoble, pos.transform.position, Quaternion.identity, tableNoble.transform);
             
-            newCard.GetComponent<NobleCardDisplay>().card = DB.GetNobleCard(noblePlace[i-1]);
-            newCard.GetComponent<NobleCardDisplay>().ShowCard();
+            //newCard.GetComponent<NobleCardDisplay>().card = DB.GetNobleCard(noblePlace[i-1]);
+            newCard.GetComponent<NobleCardDisplay>().ShowCard(DB.GetNobleCard(noblePlace[i-1]));
 
             showCards.Add(newCard);
+        }
+
+    // display tokens
+        Component[] tokens = tableToken.GetComponentsInChildren<Image>();
+        foreach(var t in tokens){
+            t.GetComponentInChildren<Text>().text = tokenPlace[t.name.ToLower()].ToString();
         }
     }
 
