@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 952721c6535060544a9be61defe137a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc60b4570f123ab4d96de34c86bee2e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -153,7 +153,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!1 &4526156544513442850
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 442a506115a1ccd4fad004bad4e5469c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc60b4570f123ab4d96de34c86bee2e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 952721c6535060544a9be61defe137a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc60b4570f123ab4d96de34c86bee2e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b98b94efd90cb484c88c66c5abafee62, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc60b4570f123ab4d96de34c86bee2e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14d35d56c955c1c4c9c74662d70499d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30882798bd8983c45887107f599ea2cb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -467,7 +467,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4526156545548200705}
   - component: {fileID: 4526156545548200766}
-  - component: {fileID: 3153345343539701404}
   m_Layer: 5
   m_Name: DevPrefab
   m_TagString: Untagged
@@ -521,28 +520,6 @@ MonoBehaviour:
   - {fileID: 4526156544513442848}
   - {fileID: 4526156544722826603}
   prestige: {fileID: 4526156544388276108}
---- !u!114 &3153345343539701404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4526156545548200704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &4526156545571204974
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +598,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!1 &4526156546175095205
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4fe790ad08966034ea5fc43352cb9736, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc60b4570f123ab4d96de34c86bee2e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -776,7 +753,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!1 &4526156546278838149
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +832,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!1 &4526156546470023741
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,4 +911,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 

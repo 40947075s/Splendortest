@@ -11,6 +11,8 @@ public class NobleCardDisplay : MonoBehaviour
     public Text prestige;
     
     public void ShowCard(NobleCard card){
+        if(card.id == 0) return;
+
         back.sprite = Resources.Load("Card/noble", typeof(Sprite)) as Sprite;
 
         int iToken = 0;

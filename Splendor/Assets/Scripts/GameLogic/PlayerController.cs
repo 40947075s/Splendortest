@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
             d.GetComponentInChildren<Text>().text = player.GetDevCard(d.name.ToLower()).ToString();
         }
 
+        foreach(var c in showCards){
+            Destroy(c);
+        }
         showCards.Clear();
         List<DevCard> rCard = player.GetRemainCards();
         for(int i=1; i<=rCard.Count; ++i){

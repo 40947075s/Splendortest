@@ -49,46 +49,49 @@ public class Board
 
     public void DisplayBoard(ref Database DB){
         ClearShowCards();
-
-    // display dev card
+        
+     // display dev card
         for(int i=1; i<=3; ++i){
             for(int j=1; j<=4; ++j){
                 GameObject pos = GameObject.Find("Lv" + i.ToString() + "Place_" + j.ToString()) as GameObject;
                 GameObject newCard = GameObject.Instantiate(prefabDev, pos.transform.position, Quaternion.identity, tableDev.transform);
                 
-                //newCard.GetComponent<DevCardDisplay>().card = DB.getDevCard(i, devPlace[i-1, j-1]);
                 newCard.GetComponent<DevCardDisplay>().ShowCard(DB.GetDevCard(i, devPlace[i-1, j-1]));
 
                 showCards.Add(newCard);
             }
         }
-
+    
     // display noble card
         for(int i=1; i<=5; ++i){
             GameObject pos = GameObject.Find("Place_" + i.ToString()) as GameObject;
             GameObject newCard = GameObject.Instantiate(prefabNoble, pos.transform.position, Quaternion.identity, tableNoble.transform);
             
-            //newCard.GetComponent<NobleCardDisplay>().card = DB.GetNobleCard(noblePlace[i-1]);
             newCard.GetComponent<NobleCardDisplay>().ShowCard(DB.GetNobleCard(noblePlace[i-1]));
 
             showCards.Add(newCard);
         }
-
+    
     // display tokens
         Component[] tokens = tableToken.GetComponentsInChildren<Image>();
         foreach(var t in tokens){
             t.GetComponentInChildren<Text>().text = tokenPlace[t.name.ToLower()].ToString();
         }
+        
     }
 
-    private void Replenish(int level, int place){  // 0:noble , 1~3:dev
-        if(level == 0 && randNoble.Count == 0) return;
-        if(level !=0 && randDev.Count == 0) return;
+    public void Replenish(int level, int place){  // 0:noble , 1~3:dev
 
         place -= 1;
         if(level == 0){
-            noblePlace[place] = randNoble[0];
-            randNoble.RemoveAt(0);
+            if(randNoble.Count == 0){
+                noblePlace[place] = 0;
+             }
+             else{
+                noblePlace[place] = randNoble[0];
+                randNoble.RemoveAt(0); 
+            }
+            
         }
         else{
             int card;
@@ -99,12 +102,16 @@ public class Board
             case 3: card = randDev.FindIndex(x => x>70); break;
             default: card = -1; break;
             }
-            
+
             if(card != -1){
                 devPlace[level-1, place] = randDev[card];
                 randDev.RemoveAt(card);
             }
+            else{
+                devPlace[level-1, place] = 0;
+            }
         }
+        
 
         return;
     }
@@ -114,6 +121,37 @@ public class Board
             Object.Destroy(card);
         }
         showCards.Clear();
+    }
+
+    public int GetTokenNum(string color){ 
+        if(tokenPlace.ContainsKey(color)) return tokenPlace[color];
+        else return -2;
+    }
+
+    public int GiveOutToken(string color, int amount){
+        if(amount < 0) return -1;
+        if(!tokenPlace.ContainsKey(color)) return -2;
+        if(tokenPlace[color] < amount) return -3;
+
+        tokenPlace[color] -= amount;
+        return amount;
+    }
+
+    public int GetDevCardByPlace(int i, int j){
+        return devPlace[i, j];
+    }
+
+    public int ReturnToken(string color, int amount){
+        if(amount < 0) return -1;
+        if(!tokenPlace.ContainsKey(color)) return -2;
+
+        tokenPlace[color] += amount;
+        return amount;
+    }
+
+    public int GetNobleIdAt(int place){
+        if(place < 1 || place > 5) return 0;
+        else return noblePlace[place-1]; 
     }
 
 }

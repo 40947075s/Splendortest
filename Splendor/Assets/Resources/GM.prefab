@@ -44,11 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df4bc09d1dae80e438a6e568fdb4e386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devData: {fileID: 4900000, guid: 170176683b00123499f10432de25bac2, type: 3}
-  nobleData: {fileID: 4900000, guid: 26981109a8cdf8e43bc296e154927d6f, type: 3}
+  devData: {fileID: 4900000, guid: 72de07200ab20694682b85c1f5dd107b, type: 3}
+  nobleData: {fileID: 4900000, guid: 24a2ecdd80a5a4045a4bf14ff0fe99cb, type: 3}
   tokenData: {fileID: 4900000, guid: 31458ebed9972384b9b3484283c796c2, type: 3}
-  randDev: 
-  randNoble: 
+  prefabDev: {fileID: 4526156545548200704, guid: 47b5a756cf4d00d41a898f3c0cdf588f, type: 3}
 --- !u!114 &9086737809503710294
 MonoBehaviour:
   m_ObjectHideFlags: 0

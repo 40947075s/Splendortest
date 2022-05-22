@@ -26,7 +26,7 @@ public class Database
             string[] values = row.Split(',');
             if(values[0] == "#") continue;
             if(values[0] == "") break;
-
+            
             DevCard card = new DevCard(row);
             devCards[card.level - 1].Add(card);
         }
@@ -36,6 +36,7 @@ public class Database
         foreach(var row in dataRow){
             string[] values = row.Split(',');
             if(values[0] == "#") continue;
+            if(values[0] == "") break;
 
             NobleCard card = new NobleCard(row);
             nobleCards.Add(card);
@@ -46,19 +47,32 @@ public class Database
         foreach(var row in dataRow){
             string[] values = row.Split(',');
             if(values[0] == "#") break;
+            if(values[0] == "") break;
             tokens.Add(values[0], int.Parse(values[1]));
         }
     }
 
-    public int GetDevNum(){
-        int count = 0;
+    public List<int> GetDevIdList(){
+        List<int> list = new List<int>();
+
         for(int i=0; i<3; ++i){
-            count += devCards[i].Count;
+            foreach(DevCard c in devCards[i]){
+                if(c.id != 0) list.Add(c.id);
+            }
         }
-        return count;
+
+        return list;
     }
 
-    public int GetNobleNum(){ return nobleCards.Count; }
+    public List<int> GetNobleIdList(){
+        List<int> list = new List<int>();
+
+        foreach(NobleCard c in nobleCards){
+            if(c.id != 0) list.Add(c.id);
+        }
+
+        return list;
+    }
 
     public Dictionary<string, int> GetTokens(){ return tokens; }
 
@@ -78,7 +92,6 @@ public class Database
         nobleCards.Clear();
         tokens.Clear();
     }
-
 
 
 }

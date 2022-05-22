@@ -13,6 +13,8 @@ public class DevCardDisplay : MonoBehaviour
     
 
     public void ShowCard(DevCard card){
+        if(card.id == 0) return;
+
         back.sprite = Resources.Load("Card/level" + card.level.ToString(), typeof(Sprite)) as Sprite;
         reward.sprite = Resources.Load("Card/" + card.reward_token, typeof(Sprite)) as Sprite;
 
