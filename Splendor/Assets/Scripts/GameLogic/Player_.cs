@@ -9,7 +9,7 @@ public class Player_
     private Dictionary<string, int> devCards;
     private List<DevCard> remainCards;
 
-    public readonly static int tokenLimit = 43;
+    public readonly static int tokenLimit = 10;
     //private int tokenCount = 0;
 
     public Player_(string playerName){
