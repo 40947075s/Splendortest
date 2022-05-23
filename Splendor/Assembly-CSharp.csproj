@@ -380,6 +380,12 @@
     <Reference Include="Newtonsoft.Json">
         <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+        <HintPath>C:/Program Files/Unity 2021.1.14f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+        <HintPath>C:/Program Files/Unity 2021.1.14f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity 2021.1.14f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
     </Reference>

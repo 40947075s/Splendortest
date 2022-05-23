@@ -11,7 +11,8 @@ using Photon.Realtime;
 public class GameSceneManager : MonoSingleton<GameSceneManager>
 {
     public GameObject panelStartMessage;
-    public GameObject gameOverScene, scorePrefab, scorePos;
+    public GameObject[] scorePos = new GameObject[4];
+    public GameObject gameOverScene, scorePrefab;
     private List<GameObject> scores = new List<GameObject>();
 
     private PhotonView pvGSM;
@@ -51,7 +52,7 @@ public class GameSceneManager : MonoSingleton<GameSceneManager>
         if(PhotonNetwork.LocalPlayer.IsMasterClient){
             ExitGames.Client.Photon.Hashtable table = new ExitGames.Client.Photon.Hashtable();
 
-            myGM.SetUpBoard();
+            myGM.SetUpBoard(PhotonNetwork.PlayerList.Length);
 
             table.Add("rd", ListToString(myGM.GetBoardDevSeed()) );
             table.Add("rn", ListToString(myGM.GetBoardNobleSeed()) );
@@ -153,22 +154,11 @@ public class GameSceneManager : MonoSingleton<GameSceneManager>
     }
 
     private void ShowGameOver(int AN, int score){
-        Vector3 offsetx = new Vector3(347, 0, 0);
-        Vector3 offsety = new Vector3(0, -81, 0);
-        
-        Vector3 pos = scorePos.transform.position;
-        
-        Debug.Log("ps");
 
-        switch(AN){
-        case 2: pos += offsetx; break;
-        case 3: pos += offsety; break;
-        case 4: pos += offsetx + offsety; break; 
-        default: break;
-        }
+        Debug.Log("ps");
         
-        GameObject p = GameObject.Instantiate(scorePrefab, pos, Quaternion.identity, gameOverScene.transform);
-        p.GetComponent<ScoreDisplay>().initScore(AN, PhotonNetwork.PlayerList[AN-1].NickName, score, pos);
+        GameObject p = GameObject.Instantiate(scorePrefab, scorePos[AN-1].transform.position, Quaternion.identity, gameOverScene.transform);
+        p.GetComponent<ScoreDisplay>().initScore(AN, PhotonNetwork.PlayerList[AN-1].NickName, score, scorePos[AN-1].transform.position);
 
         scores.Add(p);
         
@@ -355,7 +345,7 @@ public class GameSceneManager : MonoSingleton<GameSceneManager>
         if(!pvGSM.IsMine){
             List<int> rd = StringToList( (string)changedProps["rd"] );
             List<int> rn = StringToList( (string)changedProps["rn"] );
-            myGM.SetUpBoard(rd, rn);
+            myGM.SetUpBoard(rd, rn, PhotonNetwork.PlayerList.Length);
 
             myGM.DisplayBoard();  
         }

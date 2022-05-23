@@ -9,13 +9,13 @@ public class TakeCardController : MonoBehaviour
     public GameObject window;
     public Transform displaWindow;
     public Button btnSubmit;
+    public GameObject toggleOffsetUp, toggleOffsetDown, toggleOffsetKeep;
 
     private Toggle[,] toggles = new Toggle[3, 4];
     
     private Toggle[] keepToggles = new Toggle[3];
     List<GameObject> showKeep = new List<GameObject>();
-    
-    private Vector3 offset = new Vector3(0, 48, 0);
+
     private int selectI = 0, selectJ = 0;
 
     void Start() {
@@ -34,9 +34,16 @@ public class TakeCardController : MonoBehaviour
 
             // set position
                 Transform pos = GameObject.Find("Lv" + i.ToString() + "Place_" + j.ToString()).transform;
+                Vector3 offset = new Vector3(0, 0, 0);
 
-                if(j <= 2){ t.transform.position = pos.position + offset; }
-                else{ t.transform.position = pos.position - offset; }
+                if(j <= 2){ 
+                    offset.y = toggleOffsetUp.transform.position.y - pos.position.y;
+                    t.transform.position = pos.position + offset; 
+                }
+                else{
+                    offset.y = toggleOffsetDown.transform.position.y - pos.position.y;
+                    t.transform.position = pos.position + offset; 
+                }
 
                 toggles[i-1, j-1] = t;
             }
@@ -52,7 +59,10 @@ public class TakeCardController : MonoBehaviour
 
         // set position
             Transform pos = GameObject.Find("keepPlace_" + i.ToString()).transform;
-            t.transform.position = pos.position - offset; 
+            Vector3 offset = new Vector3(0, 0, 0);
+
+            offset.y = toggleOffsetKeep.transform.position.y - pos.position.y;
+            t.transform.position = pos.position + offset; 
 
             keepToggles[i-1] = t;
         }
@@ -94,6 +104,9 @@ public class TakeCardController : MonoBehaviour
             selectJ = indJ;
         // is submit allow
             btnSubmit.interactable = IsBtnAllow();
+        }
+        else{
+            btnSubmit.interactable = false;
         }
     }
 

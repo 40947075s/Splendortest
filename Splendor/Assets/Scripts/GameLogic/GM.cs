@@ -34,7 +34,7 @@ public class GM : MonoBehaviourPunCallbacks
         DB.LoadInData(devData, nobleData, tokenData);
     }
 
-    public void SetUpBoard(){
+    public void SetUpBoard(int playerNum){
     /* init board */
     // init rand seed
         randDev = new List<int>(DB.GetDevIdList());
@@ -43,16 +43,40 @@ public class GM : MonoBehaviourPunCallbacks
         Shuffle(randDev);
         Shuffle(randNoble);
 
-        while(randNoble.Count > 5) randNoble.RemoveAt(0);
+        while(randNoble.Count > playerNum+1) randNoble.RemoveAt(0);
 
         BB = new Board(randDev, randNoble, ref DB);
+
+        int numSet;
+        
+        if(playerNum == 2){ numSet = 3; }
+        else if(playerNum == 3) { numSet = 2; }
+        else { numSet = 0; }
+
+        BB.GiveOutToken("black", numSet);
+        BB.GiveOutToken("white", numSet);
+        BB.GiveOutToken("red", numSet);
+        BB.GiveOutToken("blue", numSet);
+        BB.GiveOutToken("green", numSet);
     }
 
-    public void SetUpBoard(List<int> rd, List<int> rn){
+    public void SetUpBoard(List<int> rd, List<int> rn, int playerNum){
         randDev = new List<int>(rd);
         randNoble = new List<int>(rn);
 
         BB = new Board(randDev, randNoble, ref DB);
+
+        int numSet;
+        
+        if(playerNum == 2){ numSet = 3; }
+        else if(playerNum == 3) { numSet = 2; }
+        else { numSet = 0; }
+
+        BB.GiveOutToken("black", numSet);
+        BB.GiveOutToken("white", numSet);
+        BB.GiveOutToken("red", numSet);
+        BB.GiveOutToken("blue", numSet);
+        BB.GiveOutToken("green", numSet);
     }
 
     private void InitGM(){

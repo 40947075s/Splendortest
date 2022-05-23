@@ -40,6 +40,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -700,7 +701,7 @@ ScriptsOnlyBuild:
     className: OnPointerOverTooltip
   - hash:
       serializedVersion: 2
-      Hash: 7130950df69777e0c008d11766d2ce8b
+      Hash: 1de0b67a7232f2e662607af67b7b3b57
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TakeCardController
@@ -1018,7 +1019,7 @@ ScriptsOnlyBuild:
     className: OfflineModeProperty
   - hash:
       serializedVersion: 2
-      Hash: f60e98a4a18d6e9b5597234a2b4a1374
+      Hash: 01f40d4824d39289f7168da3d0f130f3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameSceneManager
@@ -2494,7 +2495,7 @@ ScriptsOnlyBuild:
     className: StateMachine
   - hash:
       serializedVersion: 2
-      Hash: 13c181874f96ee97019f120150acaadd
+      Hash: f63019ac65b04939e9c4e5346b467ed3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KeepCardController

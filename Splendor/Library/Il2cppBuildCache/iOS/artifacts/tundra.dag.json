@@ -1,0 +1,174 @@
+{
+  "Nodes": [
+    {
+      "Annotation": "all_tundra_nodes",
+      "Action": "",
+      "Inputs": [],
+      "Outputs": [],
+      "TargetDirectories": [],
+      "PassIndex": 0,
+      "ToBuildDependencies": [
+        1,
+        2,
+        3
+      ],
+      "ToUseDependencies": [],
+      "OverwriteOutputs": true,
+      "FrontendResponseFiles": [],
+      "AllowUnexpectedOutput": true,
+      "AllowedOutputSubstrings": [],
+      "DebugActionIndex": 0
+    },
+    {
+      "Annotation": "Il2Cpp C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/il2cppOutput/Data/Metadata/global-metadata.dat",
+      "Action": "\"C:\\Program Files\\Unity 2021.1.14f1\\Editor\\Data\\il2cpp/build/deploy/netcoreapp3.1/il2cpp.exe\" --convert-to-cpp --emit-null-checks --enable-array-bounds-check --dotnetprofile=\"unityaot\" --additional-cpp=\"C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/ADDITI~1/UNITYC~1.CPP\" --additional-cpp=\"C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/ADDITI~1/UNITYI~1.CPP\" --incremental-g-c-time-slice=3 --avoid-dynamic-library-copy --profiler-report --map-file-parser=\"C:/Program Files/Unity 2021.1.14f1/Editor/Data/Tools/MapFileParser/MapFileParser.exe\" --directory=\"C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed\" --generatedcppdir=\"C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/il2cppOutput\"",
+      "Inputs": [
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/Assembly-CSharp.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/Mono.Security.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/mscorlib.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/Photon3Unity3D.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/PhotonChat.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/PhotonRealtime.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/PhotonUnityNetworking.Demos.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/PhotonUnityNetworking.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/PhotonUnityNetworking.Utilities.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/System.Configuration.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/System.Core.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/System.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/System.Numerics.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/System.Xml.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/Unity.2D.IK.Runtime.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/Unity.TextMeshPro.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.AnimationModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.AudioModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.CoreModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.GameCenterModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.GridModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.IMGUIModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.InputLegacyModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.ParticleSystemModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.Physics2DModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.PhysicsModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.SharedInternalsModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.SpriteShapeModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.TextCoreModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.TextRenderingModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.TilemapModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.UI.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.UIElementsModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.UIElementsNativeModule.dll",
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Temp/STAGIN~1/Data/Managed/UnityEngine.UIModule.dll",
+        "\"C:/Program Files/Unity 2021.1.14f1/Editor/Data/il2cpp/build/deploy/netcoreapp3.1/il2cpp.exe\""
+      ],
+      "Outputs": [
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/il2cppOutput/Data/Metadata/global-metadata.dat"
+      ],
+      "TargetDirectories": [],
+      "PassIndex": 0,
+      "ToBuildDependencies": [],
+      "ToUseDependencies": [],
+      "OverwriteOutputs": false,
+      "FrontendResponseFiles": [],
+      "AllowUnexpectedOutput": true,
+      "AllowedOutputSubstrings": [],
+      "DebugActionIndex": 1
+    },
+    {
+      "Annotation": "Copy Additional C++ File C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/il2cppOutput/UNITYC~1.CPP",
+      "Action": "copy \"C:\\Users\\弦外之音\\Desktop\\C#\\Splendor\\Splendor\\Library\\IL2CPP~1\\iOS\\ADDITI~1\\UNITYC~1.CPP\" \"C:\\Users\\弦外之音\\Desktop\\C#\\Splendor\\Splendor\\Library\\IL2CPP~1\\iOS\\il2cppOutput\\UNITYC~1.CPP\" && copy /b \"C:\\Users\\弦外之音\\Desktop\\C#\\Splendor\\Splendor\\Library\\IL2CPP~1\\iOS\\il2cppOutput\\UNITYC~1.CPP\" +,, \"C:\\Users\\弦外之音\\Desktop\\C#\\Splendor\\Splendor\\Library\\IL2CPP~1\\iOS\\il2cppOutput\\UNITYC~1.CPP\" ",
+      "Inputs": [
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/ADDITI~1/UNITYC~1.CPP"
+      ],
+      "Outputs": [
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/il2cppOutput/UNITYC~1.CPP"
+      ],
+      "TargetDirectories": [],
+      "PassIndex": 0,
+      "ToBuildDependencies": [
+        1
+      ],
+      "ToUseDependencies": [
+        1
+      ],
+      "OverwriteOutputs": true,
+      "FrontendResponseFiles": [],
+      "AllowUnexpectedOutput": true,
+      "AllowedOutputSubstrings": [],
+      "DebugActionIndex": 2
+    },
+    {
+      "Annotation": "Copy Additional C++ File C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/il2cppOutput/UNITYI~1.CPP",
+      "Action": "copy \"C:\\Users\\弦外之音\\Desktop\\C#\\Splendor\\Splendor\\Library\\IL2CPP~1\\iOS\\ADDITI~1\\UNITYI~1.CPP\" \"C:\\Users\\弦外之音\\Desktop\\C#\\Splendor\\Splendor\\Library\\IL2CPP~1\\iOS\\il2cppOutput\\UNITYI~1.CPP\" && copy /b \"C:\\Users\\弦外之音\\Desktop\\C#\\Splendor\\Splendor\\Library\\IL2CPP~1\\iOS\\il2cppOutput\\UNITYI~1.CPP\" +,, \"C:\\Users\\弦外之音\\Desktop\\C#\\Splendor\\Splendor\\Library\\IL2CPP~1\\iOS\\il2cppOutput\\UNITYI~1.CPP\" ",
+      "Inputs": [
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/ADDITI~1/UNITYI~1.CPP"
+      ],
+      "Outputs": [
+        "C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/IL2CPP~1/iOS/il2cppOutput/UNITYI~1.CPP"
+      ],
+      "TargetDirectories": [],
+      "PassIndex": 0,
+      "ToBuildDependencies": [
+        1
+      ],
+      "ToUseDependencies": [
+        1
+      ],
+      "OverwriteOutputs": true,
+      "FrontendResponseFiles": [],
+      "AllowUnexpectedOutput": true,
+      "AllowedOutputSubstrings": [],
+      "DebugActionIndex": 3
+    }
+  ],
+  "FileSignatures": [
+    {
+      "File": "../../../Temp/STAGIN~1/Data/Managed"
+    },
+    {
+      "File": "artifacts/buildprogram/tundra_buildprogram.dag.json"
+    },
+    {
+      "File": "il2cpp_settings.json"
+    },
+    {
+      "File": "unitylinker_settings.json"
+    }
+  ],
+  "GlobSignatures": [
+    {
+      "Path": "../../../Temp/STAGIN~1/Data/Managed"
+    }
+  ],
+  "ContentDigestExtensions": [
+    ".rsp",
+    ".dll",
+    ".exe",
+    ".txt",
+    ".c",
+    ".cpp",
+    ".h",
+    ".cs",
+    ".hpp"
+  ],
+  "StructuredLogFileName": "artifacts/tundra.log.json",
+  "StateFileName": "artifacts/TundraBuildState.state",
+  "StateFileNameTmp": "artifacts/TundraBuildState.state.tmp",
+  "ScanCacheFileName": "artifacts/tundra.scancache",
+  "ScanCacheFileNameTmp": "artifacts/tundra.scancache.tmp",
+  "DigestCacheFileName": "artifacts/tundra.digestcache",
+  "DigestCacheFileNameTmp": "artifacts/tundra.digestcache.tmp",
+  "DirectoriesCausingImplicitDependencies": [],
+        "NamedNodes": {
+          "all_tundra_nodes": 0
+        }
+,  "DefaultNodes": [
+    0
+  ],
+  "SharedResources": [],
+  "Scanners": [],
+  "Identifier": "artifacts/tundra.dag.json",
+  "BuildTitle": "Bee",
+  "RelativePathToRoot": ".."
+}

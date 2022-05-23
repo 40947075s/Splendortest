@@ -25,12 +25,15 @@ public class RoomSceneManager : MonoBehaviourPunCallbacks
             UpdatePlayerList();
         }
 
-        buttonStart.interactable = PhotonNetwork.IsMasterClient;
+        buttonStart.interactable = false;
+        buttonStart.gameObject.SetActive(PhotonNetwork.IsMasterClient);
+        //buttonStart.interactable = PhotonNetwork.IsMasterClient;
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient)
     {
-        buttonStart.interactable = PhotonNetwork.IsMasterClient;
+        buttonStart.gameObject.SetActive(PhotonNetwork.IsMasterClient);
+        //buttonStart.interactable = PhotonNetwork.IsMasterClient;
     }
 
     public void UpdatePlayerList(){
@@ -43,6 +46,11 @@ public class RoomSceneManager : MonoBehaviourPunCallbacks
             playerName[i].text = "  玩家" + (++i) + "    " + "尚未加入";
         }   
         
+        if(PhotonNetwork.PlayerList.Length > 1)
+            buttonStart.interactable = true;
+        else
+            buttonStart.interactable = false;
+
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
