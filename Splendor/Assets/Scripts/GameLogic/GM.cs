@@ -108,18 +108,14 @@ public class GM : MonoBehaviourPunCallbacks
 
 
     // board enough
-        bool enough = false;
+        bool enough = true, doubleRule = true;
 
         foreach(var t in takes){
-            if(t.Value == 0) continue;
-            else if(t.Value == 1){
-                enough = ( BB.GetTokenNum(t.Key) >= t.Value );
-            }
-            else if(t.Value == 2){
-                enough = ( BB.GetTokenNum(t.Key) >= 4 );
-            }
-            else enough = false;
+           if(BB.GetTokenNum(t.Key) < t.Value) enough = false;
+           if(t.Value == 2 && BB.GetTokenNum(t.Key) < 4) doubleRule = false;
         }
+
+        enough = (enough && doubleRule);
 
         return takeRule && enough;
     } 

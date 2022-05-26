@@ -70,25 +70,28 @@ public class Player_
         prestige += card.prestige;
         devCards[card.reward_token] += 1;
 
-        tokens["black"] -= card.black_cost;
-        tokens["white"] -= card.white_cost;
-        tokens["red"] -= card.red_cost;
-        tokens["blue"] -= card.blue_cost;
-        tokens["green"] -= card.green_cost;
-        
-        int count = 0;
+        Dictionary<string, int> costs = new Dictionary<string, int>(){
+            {"black", card.black_cost - devCards["black"]},
+            {"white", card.white_cost - devCards["white"]}, 
+            {"red", card.red_cost - devCards["red"]}, 
+            {"blue", card.blue_cost - devCards["blue"]}, 
+            {"green", card.green_cost - devCards["green"]}  
+        };
 
-        foreach(var t in tokens){
-            if(t.Value < 0){ count -= t.Value;}
+        int goldCount = 0;
+
+        foreach(var c in costs){
+            if(c.Value > 0){
+                tokens[c.Key] -= c.Value;
+            }
+
+            if(tokens[c.Key] < 0){
+                goldCount -= tokens[c.Key];
+                tokens[c.Key] = 0;
+            }
         }
 
-        tokens["gold"] -= count;
-
-        tokens["black"] = (tokens["black"] < 0) ? 0 : tokens["black"];
-        tokens["white"] = (tokens["white"] < 0) ? 0 : tokens["white"];
-        tokens["red"] = (tokens["red"] < 0) ? 0 : tokens["red"];
-        tokens["blue"] = (tokens["blue"] < 0) ? 0 : tokens["blue"];
-        tokens["green"] = (tokens["green"] < 0) ? 0 : tokens["green"];
+        tokens["gold"] -= goldCount;
     }
     public int GetDevCard(string color){ 
         if( !devCards.ContainsKey(color) ) return -2;

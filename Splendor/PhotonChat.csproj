@@ -295,31 +295,31 @@
         <HintPath>C:/Program Files/Unity 2021.1.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>C:/Program Files/Unity 2021.1.14f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -673,10 +673,10 @@
         <HintPath>C:/Program Files/Unity 2021.1.14f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:/Users/弦外之音/Desktop/C#/Splendor/Splendor/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>C:/Users/弦外之音/Desktop/Unity/Splendor/Splendor/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
