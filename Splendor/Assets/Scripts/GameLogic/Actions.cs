@@ -25,7 +25,7 @@ public class TakeToken : IAction
     }
 }
 
-public class GetTokenFactory
+public class TakeTokenFactory
 {
     public IAction createAction(Dictionary<string, int> takes){
         return new TakeToken(takes);

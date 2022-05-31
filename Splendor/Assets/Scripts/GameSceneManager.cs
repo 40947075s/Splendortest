@@ -188,7 +188,7 @@ public class GameSceneManager : MonoSingleton<GameSceneManager>
     
 /* action */
     public void ActTakeToken(Dictionary<string, int> takes){
-        GetTokenFactory factory = new GetTokenFactory();
+        TakeTokenFactory factory = new TakeTokenFactory();
         IAction takeToken = factory.createAction(takes);
         takeToken.fulfillAction(myGM, myPlayer);
 
@@ -406,7 +406,7 @@ public class GameSceneManager : MonoSingleton<GameSceneManager>
 
     [PunRPC]
     void RpcTakeToken(string takes){
-        GetTokenFactory factory = new GetTokenFactory();
+        TakeTokenFactory factory = new TakeTokenFactory();
         IAction takeToken = factory.createAction(UnPackTokenData(takes));
         takeToken.fulfillAction(myGM, null);
 
